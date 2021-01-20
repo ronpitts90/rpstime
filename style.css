@@ -31,5 +31,27 @@ font-family: Asap, sans-serif;
     text-align: center;
     padding: 15px 15px;
     font-family: Asap, sans-serif;
+    /* must have this position in order for the user & comp lables to have an absolute position */
+    position: relative;
 
+}
+
+.badge {
+    background: #e2584d;
+    color: white;
+    font-size: 15px;
+    padding: 2px 8px ;
+    font-family: Asap, sans-serif;
+}
+
+#user-label {
+ position: absolute;
+ top: 30px;
+ left: -20px;
+}
+
+#comp-label {
+    position: absolute;
+    top: 30px;
+    right: -20px;
 }

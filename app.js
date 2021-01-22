@@ -14,17 +14,19 @@ const scissorDiv = document.getElementById("sciz");
 
 // Computer
 function compChoice(){
-    const choices = ["roc", "pape", "sciz"]
+    const choices = ["roc", "pape", "sciz"];
+    const randomNum = (Math.floor(Math.random() * 3)); 
+    return choices[randomNum]; 
 }
-
-compChoice(); 
-
 
 
 // User
 function game(userChoice){
-    console.log("poop  " + userChoice)
+    // console.log("poop  " + userChoice)
+    const computerChoices = compChoice(); 
 }
+
+
 
 function main(){
     rockDiv.addEventListener("click" , function(){

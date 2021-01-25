@@ -33,6 +33,13 @@ function game(userChoice){
         case "rocpape":
         case "papesciz":
         case "scizroc":
+        console.log("User Loses!!");
+        break; 
+        case "rocroc":
+        case "papepape":
+        case "scizsciz":
+        console.log("Its a draw!!");
+        break; 
     }
 }
 

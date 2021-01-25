@@ -24,6 +24,16 @@ function compChoice(){
 function game(userChoice){
     // console.log("poop  " + userChoice)
     const computerChoices = compChoice(); 
+    switch (userChoice + computerChoices){
+        case "rocsciz":
+        case "paperoc":
+        case "scizpape":
+        console.log("User Wins!!");
+        break;
+        case "rocpape":
+        case "papesciz":
+        case "scizroc":
+    }
 }
 
 

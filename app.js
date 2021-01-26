@@ -36,23 +36,23 @@ function win(userChoice, computerChoices){
     resultDiv.innerHTML = `${convertWord(userChoice)} ${smallUserWord}  beats ${convertWord(computerChoices)} ${smallCompWord} , You Win!`; 
 }
 
-function lose(){
-    userScore++;
+function lose(userChoice, computerChoices){
+    compScore++;
     userScoreEl.innerHTML = userScore;
     compScoreEl.innerHTML = compScore;
     const smallUserWord = "user". fontsize(3).sub();
     const smallCompWord = "comp". fontsize(3).sub();  
-    resultDiv.innerHTML = `${convertWord(userChoice)} ${smallUserWord}  beats ${convertWord(computerChoices)} ${smallCompWord} , You Win!`; 
+    resultDiv.innerHTML = `${convertWord(userChoice)} ${smallUserWord}  loses to ${convertWord(computerChoices)} ${smallCompWord} , You Lose!`; 
 }
 
-function draw(){
-    userScore++;
-    userScoreEl.innerHTML = userScore;
-    compScoreEl.innerHTML = compScore;
-    const smallUserWord = "user". fontsize(3).sub();
-    const smallCompWord = "comp". fontsize(3).sub();  
-    resultDiv.innerHTML = `${convertWord(userChoice)} ${smallUserWord}  beats ${convertWord(computerChoices)} ${smallCompWord} , You Win!`; 
-}
+// function draw(){
+//     userScore++;
+//     userScoreEl.innerHTML = userScore;
+//     compScoreEl.innerHTML = compScore;
+//     const smallUserWord = "user". fontsize(3).sub();
+//     const smallCompWord = "comp". fontsize(3).sub();  
+//     resultDiv.innerHTML = `${convertWord(userChoice)} ${smallUserWord}  beats ${convertWord(computerChoices)} ${smallCompWord} , You Win!`; 
+// }
 
 // User
 function game(userChoice){

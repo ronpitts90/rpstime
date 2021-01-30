@@ -36,7 +36,7 @@ function win(userChoice, computerChoices){
     const smallCompWord = "comp". fontsize(3).sub();  
     resultDiv.innerHTML = `${convertWord(userChoice)} ${smallUserWord}  beats ${convertWord(computerChoices)} ${smallCompWord} , You Win!`; 
     userChoiceDiv.classList.add('green-glow'); 
-    setTimeout(function() {userChoiceDiv.classList.remove('green-glow')}, 500)
+    setTimeout(()=> userChoiceDiv.classList.remove('green-glow'), 500)
 }
 
 
@@ -49,8 +49,8 @@ function lose(userChoice, computerChoices){
     const smallUserWord = "user". fontsize(3).sub();
     const smallCompWord = "comp". fontsize(3).sub();  
     resultDiv.innerHTML = `${convertWord(userChoice)} ${smallUserWord}  loses to ${convertWord(computerChoices)} ${smallCompWord} , You Lose!`; 
-    userChoiceDiv.classList.add('green-glow'); 
-    setTimeout(function() {userChoiceDiv.classList.remove('res-glow')}, 500)
+    userChoiceDiv.classList.add('red-glow'); 
+    setTimeout(() => userChoiceDiv.classList.remove('red-glow'), 500)
 }
 
 function draw(userChoice, computerChoices){
@@ -58,8 +58,8 @@ function draw(userChoice, computerChoices){
     const smallCompWord = "comp". fontsize(3).sub(); 
     userChoiceDiv = document.getElementById(userChoice);  
     resultDiv.innerHTML = `${convertWord(userChoice)} ${smallUserWord} cancels out ${convertWord(computerChoices)} ${smallCompWord} , Its a draw!`; 
-    userChoiceDiv.classList.add('green-glow'); 
-    setTimeout(function() {userChoiceDiv.classList.remove('gray-glow')}, 500)
+    userChoiceDiv.classList.add('gray-glow'); 
+    setTimeout(() => userChoiceDiv.classList.remove('gray-glow'), 500)
 }
 
 // User

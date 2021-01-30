@@ -88,17 +88,11 @@ function game(userChoice){
 
 
 function main(){
-    rockDiv.addEventListener("click" , function(){
-        game("roc");
-     });
+    rockDiv.addEventListener("click" , ()=> game("roc"));
      
-     paperDiv.addEventListener("click" , function(){
-         game("pape");
-     });
+     paperDiv.addEventListener("click" , ()=> game("pape"));
      
-     scissorDiv.addEventListener("click" , function(){
-         game("sciz"); 
-     });
+     scissorDiv.addEventListener("click" , ()=> game("sciz"));
 }
 
 main(); 

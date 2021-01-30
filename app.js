@@ -31,25 +31,35 @@ function win(userChoice, computerChoices){
     userScore++;
     userScoreEl.innerHTML = userScore;
     compScoreEl.innerHTML = compScore;
+    userChoiceDiv = document.getElementById(userChoice); 
     const smallUserWord = "user". fontsize(3).sub();
     const smallCompWord = "comp". fontsize(3).sub();  
     resultDiv.innerHTML = `${convertWord(userChoice)} ${smallUserWord}  beats ${convertWord(computerChoices)} ${smallCompWord} , You Win!`; 
-    document.getElementById(userChoice).classList.add('green-glow'); 
+    userChoiceDiv.classList.add('green-glow'); 
+    setTimeout(function() {userChoiceDiv.classList.remove('green-glow')}, 500)
 }
+
+
 
 function lose(userChoice, computerChoices){
     compScore++;
     userScoreEl.innerHTML = userScore;
     compScoreEl.innerHTML = compScore;
+    userChoiceDiv = document.getElementById(userChoice); 
     const smallUserWord = "user". fontsize(3).sub();
     const smallCompWord = "comp". fontsize(3).sub();  
     resultDiv.innerHTML = `${convertWord(userChoice)} ${smallUserWord}  loses to ${convertWord(computerChoices)} ${smallCompWord} , You Lose!`; 
+    userChoiceDiv.classList.add('green-glow'); 
+    setTimeout(function() {userChoiceDiv.classList.remove('res-glow')}, 500)
 }
 
 function draw(userChoice, computerChoices){
     const smallUserWord = "user". fontsize(3).sub();
-    const smallCompWord = "comp". fontsize(3).sub();  
+    const smallCompWord = "comp". fontsize(3).sub(); 
+    userChoiceDiv = document.getElementById(userChoice);  
     resultDiv.innerHTML = `${convertWord(userChoice)} ${smallUserWord} cancels out ${convertWord(computerChoices)} ${smallCompWord} , Its a draw!`; 
+    userChoiceDiv.classList.add('green-glow'); 
+    setTimeout(function() {userChoiceDiv.classList.remove('gray-glow')}, 500)
 }
 
 // User

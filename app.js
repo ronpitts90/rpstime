@@ -45,14 +45,11 @@ function lose(userChoice, computerChoices){
     resultDiv.innerHTML = `${convertWord(userChoice)} ${smallUserWord}  loses to ${convertWord(computerChoices)} ${smallCompWord} , You Lose!`; 
 }
 
-// function draw(){
-//     userScore++;
-//     userScoreEl.innerHTML = userScore;
-//     compScoreEl.innerHTML = compScore;
-//     const smallUserWord = "user". fontsize(3).sub();
-//     const smallCompWord = "comp". fontsize(3).sub();  
-//     resultDiv.innerHTML = `${convertWord(userChoice)} ${smallUserWord}  beats ${convertWord(computerChoices)} ${smallCompWord} , You Win!`; 
-// }
+function draw(userChoice, computerChoices){
+    const smallUserWord = "user". fontsize(3).sub();
+    const smallCompWord = "comp". fontsize(3).sub();  
+    resultDiv.innerHTML = `${convertWord(userChoice)} ${smallUserWord} cancels out ${convertWord(computerChoices)} ${smallCompWord} , Its a draw!`; 
+}
 
 // User
 function game(userChoice){
